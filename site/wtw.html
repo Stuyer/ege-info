@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Егэ задачи информатика</title>
+<style>
+    @keyframes fadeIn {
+    from {
+    opacity: 0;
+    }
+    to {
+    opacity: 1;
+    }
+}
+    body {
+    padding: 300px;
+    text-align: center;
+    background-color: #87aca9;
+}
+    button {
+    cursor: pointer;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 10px 20px; 
+    font-size: 18px; 
+    border-radius: 10px;
+}   
+    .dark-theme {
+    padding: 300px;
+    text-align: center;
+    background-color: #2a2727;
+}
+    .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none;
+}
+    img {
+    display: none;
+    max-width: 100%;
+    height: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    animation: fadeIn 0.4s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+    table {
+    width: 50%;
+    border-collapse: collapse;
+    margin-bottom: 50px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    user-select: none;
+}
+    th {
+    border: 1px solid black;
+    padding: 10%;
+    text-align: center;
+    font-size: 150%;
+    background-color: #ded8d8c2;
+}
+    .table-container {
+    float: left;
+    width: 50%;
+}
+    .clearfix {
+    clear: both;
+}
+</style>
+</head>
+<body>
+<div class="table-container">
+    <table data-image-id="image2" onclick="showImage('image2',event)">
+        <th>2 задание</th>
+    </table>
+
+    <table data-image-id="image5" onclick="showImage('image5',event)">
+        <th>5 задание</th>
+    </table>
+
+    <table data-image-id="image8_1" onclick="showImage('image8_1',event)">
+        <th>8 задание тип 1</th>
+    </table>
+
+    <table data-image-id="image8_2" onclick="showImage('image8_2',event)">
+        <th>8 задание тип 2/3</th>
+    </table>
+
+    <table data-image-id="image9" onclick="showImage('image9',event)">
+        <th>9 задание</th>
+    </table>
+
+    <table data-image-id="image12" onclick="showImage('image12',event)">
+        <th>12 задание</th>
+    </table>
+
+    <table data-image-id="image14_1" onclick="showImage('image14_1',event)">
+        <th>14 задание тип 1</th>
+    </table>
+
+    <table data-image-id="image14_2" onclick="showImage('image14_2',event)">
+        <th>14 задание тип 2</th>
+    </table>
+</div>
+
+<div class="table-container">
+    <table data-image-id="image15_1" onclick="showImage('image15_1',event)">
+        <th>15 задание тип 1</th>
+    </table>
+
+    <table data-image-id="image15_2" onclick="showImage('image15_2',event)">
+        <th>15 задание тип 2</th>
+    </table>
+
+    <table data-image-id="image16" onclick="showImage('image16',event)">
+        <th>16 задание</th>
+    </table>
+
+    <table data-image-id="image17" onclick="showImage('image17',event)">
+        <th>17 задание</th>
+    </table>
+
+    <table data-image-id="image19-21" onclick="showImage('image19-21',event)">
+        <th>19-21 задания</th>
+    </table>
+
+    <table data-image-id="image23" onclick="showImage('image23',event)">
+        <th>23 задание</th>
+    </table>
+
+    <table data-image-id="image24_1" onclick="showImage('image24_1',event)">
+        <th>24 задание тип 1</th>
+    </table>
+
+    <table data-image-id="image24_2" onclick="showImage('image24_2',event)">
+        <th>24 задание тип 2</th>
+    </table>
+</div>
+
+<div class="clearfix"></div>
+<div class="overlay" id="overlay"></div>
+<button onclick="toggleTheme()">Сменить тему</button>
+
+<img src="2.jpg" alt="Image 2" id="image2">
+<img src="5.jpg" alt="Image 5" id="image5">
+<img src="8_1.jpg" alt="Image 8_1" id="image8_1">
+<img src="8_2.jpg" alt="Image 8_2" id="image8_2">
+<img src="9.jpg" alt="Image 9" id="image9">
+<img src="12.jpg" alt="Image 12" id="image12">
+<img src="14_1.jpg" alt="Image 14_1" id="image14_1">
+<img src="14_2.jpg" alt="Image 14_2" id="image14_2">
+<img src="15_1.jpg" alt="Image 15_1" id="image15_1">
+<img src="15_2.jpg" alt="Image 15_2" id="image15_2">
+<img src="16.jpg" alt="Image 16" id="image16">
+<img src="17.jpg" alt="Image 17" id="image17">
+<img src="19-21.jpg" alt="Image 19-21" id="image19-21">
+<img src="23.jpg" alt="Image 23" id="image23">
+<img src="24_1.jpg" alt="Image 24_1" id="image24_1">
+<img src="24_2.jpg" alt="Image 24_2" id="image24_2">
+
+
+<script>
+function showImage(imageId, event) {
+    var image = document.getElementById(imageId);
+    image.style.display = 'block';
+    var overlay = document.getElementById('overlay');
+    overlay.style.display = 'block';
+    document.addEventListener('click', hideImage);
+    if (event) {
+        event.stopPropagation();
+    }
+}
+function hideImage() {
+    var images = document.querySelectorAll('img');
+    images.forEach(function(img) {
+        img.style.display = 'none';
+    });
+    var overlay = document.getElementById('overlay');
+    overlay.style.display = 'none';
+    document.removeEventListener('click', hideImage);
+}
+function toggleTheme() {
+    document.body.classList.toggle('dark-theme');
+}
+</script> 
+</body>
+</html>
